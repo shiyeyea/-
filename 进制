@@ -1,0 +1,45 @@
+进制的判断
+#include<stdio.h>
+int main()
+{
+	int n,t;
+	printf("尚振豪作业\n");
+	printf("请输入你的进制为：");
+	scanf("%d",&n);
+	switch(n)
+	{
+	case 8: printf("请输入你的数字：");
+		scanf("%o",&t);
+		printf("你输入的%o倒序为：",t);
+		while(t)
+		{
+			printf("%o",t%8);
+			t/=8;
+		}
+		printf("\n");
+		break;
+	case 10:printf("请输入你的数字：");
+		scanf("%d",&t);
+		printf("你输入的%d倒序为：",t);
+		while(t)
+		{
+			printf("%x",t%10);
+			t/=10;
+		}
+		printf("\n");
+		break;
+	case 16:  printf("请输入你的数字：");
+		scanf("%x",&t);
+		printf("你输入的%x倒序为：",t);
+		while(t)
+		{
+			printf("%x",t%16);
+			t/=16;
+		}
+		printf("\n");
+		break;
+	default  :printf("输入有误\n");
+	}
+
+	return 0;
+}
